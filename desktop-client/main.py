@@ -45,7 +45,7 @@ def send_data_to_server(data_entry):
         print(f"发送请求时发生错误: {e}")
 
 if __name__ == "__main__":
-    print("正在生成用于 测试的随机数据记录...")
+    print("正在生成用于测试的随机数据记录...")
     test_data = generate_random_data_entry()
     print("\n生成的数据:")
     print(json.dumps(test_data, indent=2))
