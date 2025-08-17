@@ -1,0 +1,1052 @@
+[
+  {
+    "timestamp": "2025-08-02T16:49:09.852Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0001",
+    "animalWeight": 149.81
+  },
+  {
+    "timestamp": "2025-05-24T18:34:09.760Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0030",
+    "animalWeight": 35.83
+  },
+  {
+    "timestamp": "2025-08-10T07:07:03.092Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0040",
+    "animalWeight": 139.09
+  },
+  {
+    "timestamp": "2025-08-12T09:08:49.953Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0007",
+    "animalWeight": 38.62
+  },
+  {
+    "timestamp": "2025-06-21T07:50:52.490Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0037",
+    "animalWeight": 133.89
+  },
+  {
+    "timestamp": "2025-08-11T11:45:44.326Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0021",
+    "animalWeight": 126.73
+  },
+  {
+    "timestamp": "2025-08-16T23:26:16.541Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0012",
+    "animalWeight": 114.58
+  },
+  {
+    "timestamp": "2025-06-17T18:41:51.212Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0037",
+    "animalWeight": 191.86
+  },
+  {
+    "timestamp": "2025-06-23T03:41:48.742Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0048",
+    "animalWeight": 7.08
+  },
+  {
+    "timestamp": "2025-08-02T04:52:46.786Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0050",
+    "animalWeight": 197.98
+  },
+  {
+    "timestamp": "2025-06-22T04:29:18.841Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0029",
+    "animalWeight": 184.56
+  },
+  {
+    "timestamp": "2025-07-06T15:33:48.078Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0034",
+    "animalWeight": 197.64
+  },
+  {
+    "timestamp": "2025-07-19T22:54:31.044Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0001",
+    "animalWeight": 78.36
+  },
+  {
+    "timestamp": "2025-08-08T12:32:13.132Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0047",
+    "animalWeight": 79.68
+  },
+  {
+    "timestamp": "2025-05-25T00:34:59.710Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0040",
+    "animalWeight": 46.77
+  },
+  {
+    "timestamp": "2025-08-04T10:29:16.127Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0026",
+    "animalWeight": 199.87
+  },
+  {
+    "timestamp": "2025-07-20T02:09:00.974Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0004",
+    "animalWeight": 58.37
+  },
+  {
+    "timestamp": "2025-07-08T15:06:07.247Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0050",
+    "animalWeight": 80.17
+  },
+  {
+    "timestamp": "2025-07-25T01:25:51.200Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0006",
+    "animalWeight": 28.56
+  },
+  {
+    "timestamp": "2025-07-20T13:22:18.656Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0030",
+    "animalWeight": 74.44
+  },
+  {
+    "timestamp": "2025-07-22T01:39:24.146Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0015",
+    "animalWeight": 50.85
+  },
+  {
+    "timestamp": "2025-07-06T07:18:56.313Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0047",
+    "animalWeight": 23.1
+  },
+  {
+    "timestamp": "2025-07-27T19:00:16.182Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0040",
+    "animalWeight": 110.8
+  },
+  {
+    "timestamp": "2025-07-01T02:10:28.981Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0024",
+    "animalWeight": 116.57
+  },
+  {
+    "timestamp": "2025-06-21T16:16:20.787Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0019",
+    "animalWeight": 97.94
+  },
+  {
+    "timestamp": "2025-06-05T04:07:19.479Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0021",
+    "animalWeight": 22.93
+  },
+  {
+    "timestamp": "2025-06-24T05:27:32.963Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0027",
+    "animalWeight": 170.02
+  },
+  {
+    "timestamp": "2025-06-04T03:42:28.659Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0017",
+    "animalWeight": 80.49
+  },
+  {
+    "timestamp": "2025-07-11T07:23:20.276Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0050",
+    "animalWeight": 116.64
+  },
+  {
+    "timestamp": "2025-07-04T21:36:41.815Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0019",
+    "animalWeight": 57.97
+  },
+  {
+    "timestamp": "2025-07-28T14:14:07.045Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0015",
+    "animalWeight": 115.84
+  },
+  {
+    "timestamp": "2025-06-17T19:24:40.516Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0025",
+    "animalWeight": 89.66
+  },
+  {
+    "timestamp": "2025-07-09T07:49:00.829Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0041",
+    "animalWeight": 84.9
+  },
+  {
+    "timestamp": "2025-06-16T09:20:26.718Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0040",
+    "animalWeight": 10.33
+  },
+  {
+    "timestamp": "2025-07-17T14:13:00.029Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0049",
+    "animalWeight": 74.03
+  },
+  {
+    "timestamp": "2025-08-02T16:05:28.667Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0041",
+    "animalWeight": 147.85
+  },
+  {
+    "timestamp": "2025-06-13T01:18:17.977Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0008",
+    "animalWeight": 38.23
+  },
+  {
+    "timestamp": "2025-05-24T00:41:19.554Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0034",
+    "animalWeight": 55.53
+  },
+  {
+    "timestamp": "2025-07-04T19:25:11.460Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0038",
+    "animalWeight": 110.19
+  },
+  {
+    "timestamp": "2025-08-05T08:16:40.159Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0018",
+    "animalWeight": 15.49
+  },
+  {
+    "timestamp": "2025-06-26T18:45:51.592Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0042",
+    "animalWeight": 154.3
+  },
+  {
+    "timestamp": "2025-08-13T19:49:36.219Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0030",
+    "animalWeight": 45.55
+  },
+  {
+    "timestamp": "2025-07-24T17:39:02.180Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0016",
+    "animalWeight": 10.61
+  },
+  {
+    "timestamp": "2025-07-27T22:58:00.044Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0036",
+    "animalWeight": 109.13
+  },
+  {
+    "timestamp": "2025-07-11T13:08:14.688Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0022",
+    "animalWeight": 183.08
+  },
+  {
+    "timestamp": "2025-06-04T09:43:05.413Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0026",
+    "animalWeight": 37.14
+  },
+  {
+    "timestamp": "2025-06-29T21:16:48.353Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0008",
+    "animalWeight": 58.52
+  },
+  {
+    "timestamp": "2025-06-07T23:27:14.753Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0001",
+    "animalWeight": 34.1
+  },
+  {
+    "timestamp": "2025-07-08T00:01:56.468Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0020",
+    "animalWeight": 124.84
+  },
+  {
+    "timestamp": "2025-06-23T13:02:57.662Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0048",
+    "animalWeight": 16.51
+  },
+  {
+    "timestamp": "2025-08-06T09:52:05.733Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0020",
+    "animalWeight": 114.89
+  },
+  {
+    "timestamp": "2025-07-21T03:42:52.546Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0024",
+    "animalWeight": 125.49
+  },
+  {
+    "timestamp": "2025-07-06T00:50:39.990Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0036",
+    "animalWeight": 126.26
+  },
+  {
+    "timestamp": "2025-07-30T03:50:37.938Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0022",
+    "animalWeight": 165.62
+  },
+  {
+    "timestamp": "2025-05-27T23:46:21.613Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0006",
+    "animalWeight": 57.5
+  },
+  {
+    "timestamp": "2025-08-05T09:36:11.972Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0003",
+    "animalWeight": 60.29
+  },
+  {
+    "timestamp": "2025-07-08T07:22:47.764Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0025",
+    "animalWeight": 116.88
+  },
+  {
+    "timestamp": "2025-05-24T06:01:11.425Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0033",
+    "animalWeight": 27.3
+  },
+  {
+    "timestamp": "2025-06-27T13:08:30.315Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0020",
+    "animalWeight": 103.37
+  },
+  {
+    "timestamp": "2025-06-10T14:43:43.884Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0040",
+    "animalWeight": 27.13
+  },
+  {
+    "timestamp": "2025-07-25T23:01:35.556Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0042",
+    "animalWeight": 166.73
+  },
+  {
+    "timestamp": "2025-06-22T21:55:17.578Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0049",
+    "animalWeight": 135.14
+  },
+  {
+    "timestamp": "2025-06-01T21:32:45.125Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0025",
+    "animalWeight": 55.71
+  },
+  {
+    "timestamp": "2025-06-28T06:55:45.017Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0036",
+    "animalWeight": 113.14
+  },
+  {
+    "timestamp": "2025-06-26T13:28:28.856Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0022",
+    "animalWeight": 95.81
+  },
+  {
+    "timestamp": "2025-06-01T08:57:20.610Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0012",
+    "animalWeight": 171.99
+  },
+  {
+    "timestamp": "2025-05-25T02:44:48.236Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0014",
+    "animalWeight": 43.68
+  },
+  {
+    "timestamp": "2025-07-05T13:58:53.762Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0046",
+    "animalWeight": 111.05
+  },
+  {
+    "timestamp": "2025-06-28T19:31:32.199Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0028",
+    "animalWeight": 30.11
+  },
+  {
+    "timestamp": "2025-08-11T18:28:32.178Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0048",
+    "animalWeight": 8.59
+  },
+  {
+    "timestamp": "2025-06-06T19:59:32.523Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0020",
+    "animalWeight": 158.74
+  },
+  {
+    "timestamp": "2025-05-31T17:43:57.963Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0012",
+    "animalWeight": 46.35
+  },
+  {
+    "timestamp": "2025-06-02T17:27:20.929Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0029",
+    "animalWeight": 108.54
+  },
+  {
+    "timestamp": "2025-07-20T10:52:15.307Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0004",
+    "animalWeight": 9.14
+  },
+  {
+    "timestamp": "2025-07-07T08:26:07.498Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0029",
+    "animalWeight": 149.5
+  },
+  {
+    "timestamp": "2025-06-06T07:23:39.592Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0028",
+    "animalWeight": 85.89
+  },
+  {
+    "timestamp": "2025-08-07T00:11:21.312Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0022",
+    "animalWeight": 172.87
+  },
+  {
+    "timestamp": "2025-06-07T15:18:56.217Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0014",
+    "animalWeight": 103.52
+  },
+  {
+    "timestamp": "2025-06-18T07:57:30.392Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0030",
+    "animalWeight": 53.61
+  },
+  {
+    "timestamp": "2025-06-09T16:39:35.522Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0006",
+    "animalWeight": 122.96
+  },
+  {
+    "timestamp": "2025-06-08T18:26:41.954Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0018",
+    "animalWeight": 196.27
+  },
+  {
+    "timestamp": "2025-08-13T19:01:22.191Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0021",
+    "animalWeight": 136.42
+  },
+  {
+    "timestamp": "2025-08-04T03:35:24.754Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0033",
+    "animalWeight": 186.12
+  },
+  {
+    "timestamp": "2025-06-13T18:23:58.976Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0036",
+    "animalWeight": 97.79
+  },
+  {
+    "timestamp": "2025-07-23T17:00:55.427Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0046",
+    "animalWeight": 130.81
+  },
+  {
+    "timestamp": "2025-06-18T01:26:55.984Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0002",
+    "animalWeight": 64.09
+  },
+  {
+    "timestamp": "2025-07-04T04:47:54.003Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0040",
+    "animalWeight": 92.79
+  },
+  {
+    "timestamp": "2025-07-17T00:38:04.896Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0039",
+    "animalWeight": 51.32
+  },
+  {
+    "timestamp": "2025-05-30T10:10:51.716Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0031",
+    "animalWeight": 66.52
+  },
+  {
+    "timestamp": "2025-07-07T19:48:21.647Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0019",
+    "animalWeight": 9.29
+  },
+  {
+    "timestamp": "2025-07-05T07:16:21.401Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0045",
+    "animalWeight": 114.03
+  },
+  {
+    "timestamp": "2025-06-11T16:34:41.472Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0007",
+    "animalWeight": 144.37
+  },
+  {
+    "timestamp": "2025-07-13T23:01:19.920Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0001",
+    "animalWeight": 27.2
+  },
+  {
+    "timestamp": "2025-06-28T23:23:44.807Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0009",
+    "animalWeight": 54.67
+  },
+  {
+    "timestamp": "2025-05-23T13:15:23.492Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0030",
+    "animalWeight": 103.89
+  },
+  {
+    "timestamp": "2025-06-10T11:56:22.362Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0036",
+    "animalWeight": 131.5
+  },
+  {
+    "timestamp": "2025-06-30T22:28:49.900Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0003",
+    "animalWeight": 114.2
+  },
+  {
+    "timestamp": "2025-05-27T15:05:56.919Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0042",
+    "animalWeight": 103.05
+  },
+  {
+    "timestamp": "2025-07-24T08:42:56.967Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0049",
+    "animalWeight": 194.76
+  },
+  {
+    "timestamp": "2025-07-27T10:07:12.606Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0006",
+    "animalWeight": 161.32
+  },
+  {
+    "timestamp": "2025-08-11T20:00:50.677Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0026",
+    "animalWeight": 19.85
+  },
+  {
+    "timestamp": "2025-07-12T18:50:11.804Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0044",
+    "animalWeight": 148.39
+  },
+  {
+    "timestamp": "2025-06-14T03:50:54.681Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0016",
+    "animalWeight": 163.15
+  },
+  {
+    "timestamp": "2025-06-19T21:11:19.687Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0039",
+    "animalWeight": 39.14
+  },
+  {
+    "timestamp": "2025-08-10T16:46:07.548Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0009",
+    "animalWeight": 64.76
+  },
+  {
+    "timestamp": "2025-07-10T05:12:59.554Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0002",
+    "animalWeight": 179.32
+  },
+  {
+    "timestamp": "2025-07-14T19:32:27.977Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0034",
+    "animalWeight": 126.07
+  },
+  {
+    "timestamp": "2025-06-16T02:59:14.987Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0029",
+    "animalWeight": 154.57
+  },
+  {
+    "timestamp": "2025-08-16T02:38:19.537Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0005",
+    "animalWeight": 93.8
+  },
+  {
+    "timestamp": "2025-07-29T05:26:33.281Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0050",
+    "animalWeight": 114.9
+  },
+  {
+    "timestamp": "2025-06-29T18:29:09.635Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0016",
+    "animalWeight": 65.58
+  },
+  {
+    "timestamp": "2025-05-26T19:16:09.691Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0034",
+    "animalWeight": 11.17
+  },
+  {
+    "timestamp": "2025-06-03T14:21:23.591Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0011",
+    "animalWeight": 27.56
+  },
+  {
+    "timestamp": "2025-06-11T09:14:14.342Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0021",
+    "animalWeight": 79.23
+  },
+  {
+    "timestamp": "2025-08-04T21:14:32.127Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0032",
+    "animalWeight": 169.74
+  },
+  {
+    "timestamp": "2025-07-12T19:40:07.433Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0021",
+    "animalWeight": 163.74
+  },
+  {
+    "timestamp": "2025-06-08T11:52:05.272Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0022",
+    "animalWeight": 56.84
+  },
+  {
+    "timestamp": "2025-07-18T04:02:47.795Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0041",
+    "animalWeight": 87.08
+  },
+  {
+    "timestamp": "2025-05-28T18:55:45.843Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0048",
+    "animalWeight": 167.82
+  },
+  {
+    "timestamp": "2025-05-30T02:09:09.997Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0001",
+    "animalWeight": 40.3
+  },
+  {
+    "timestamp": "2025-08-07T16:48:28.614Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0023",
+    "animalWeight": 91.67
+  },
+  {
+    "timestamp": "2025-08-07T09:41:48.933Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0001",
+    "animalWeight": 86.07
+  },
+  {
+    "timestamp": "2025-05-26T12:05:16.354Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0039",
+    "animalWeight": 46.37
+  },
+  {
+    "timestamp": "2025-06-06T13:11:15.542Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0013",
+    "animalWeight": 56.59
+  },
+  {
+    "timestamp": "2025-06-04T16:14:21.627Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0008",
+    "animalWeight": 116.87
+  },
+  {
+    "timestamp": "2025-07-19T17:03:09.663Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0010",
+    "animalWeight": 107.06
+  },
+  {
+    "timestamp": "2025-07-29T11:38:43.957Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0019",
+    "animalWeight": 57.31
+  },
+  {
+    "timestamp": "2025-07-15T09:25:28.382Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0013",
+    "animalWeight": 107.46
+  },
+  {
+    "timestamp": "2025-08-06T01:20:19.846Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0011",
+    "animalWeight": 31.78
+  },
+  {
+    "timestamp": "2025-06-11T05:21:05.880Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0045",
+    "animalWeight": 152.71
+  },
+  {
+    "timestamp": "2025-07-04T08:34:29.976Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0019",
+    "animalWeight": 159.9
+  },
+  {
+    "timestamp": "2025-05-21T12:58:43.910Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0012",
+    "animalWeight": 120.77
+  },
+  {
+    "timestamp": "2025-06-08T02:51:26.955Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0017",
+    "animalWeight": 189.4
+  },
+  {
+    "timestamp": "2025-08-05T10:56:03.969Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0017",
+    "animalWeight": 140.29
+  },
+  {
+    "timestamp": "2025-06-25T06:01:28.423Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0012",
+    "animalWeight": 75.89
+  },
+  {
+    "timestamp": "2025-05-27T20:49:22.288Z",
+    "deviceId": "DEV-005",
+    "sourceUnit": "Unit-C",
+    "animalId": "ANI-0003",
+    "animalWeight": 92.07
+  },
+  {
+    "timestamp": "2025-07-11T03:46:12.490Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0013",
+    "animalWeight": 29.41
+  },
+  {
+    "timestamp": "2025-08-04T18:11:53.151Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0033",
+    "animalWeight": 181.69
+  },
+  {
+    "timestamp": "2025-08-08T04:08:13.311Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0024",
+    "animalWeight": 188.63
+  },
+  {
+    "timestamp": "2025-05-29T01:13:11.349Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0012",
+    "animalWeight": 32.51
+  },
+  {
+    "timestamp": "2025-07-24T20:04:09.477Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0015",
+    "animalWeight": 115.17
+  },
+  {
+    "timestamp": "2025-05-21T20:48:55.682Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0015",
+    "animalWeight": 141.98
+  },
+  {
+    "timestamp": "2025-05-27T15:39:34.369Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0011",
+    "animalWeight": 150.8
+  },
+  {
+    "timestamp": "2025-06-02T12:55:29.562Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0042",
+    "animalWeight": 149.77
+  },
+  {
+    "timestamp": "2025-07-22T07:31:17.092Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0002",
+    "animalWeight": 133.69
+  },
+  {
+    "timestamp": "2025-08-07T01:20:02.002Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0031",
+    "animalWeight": 132.77
+  },
+  {
+    "timestamp": "2025-07-26T18:03:52.315Z",
+    "deviceId": "DEV-004",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0034",
+    "animalWeight": 15.44
+  },
+  {
+    "timestamp": "2025-06-30T11:38:31.830Z",
+    "deviceId": "DEV-002",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0041",
+    "animalWeight": 53.12
+  },
+  {
+    "timestamp": "2025-06-15T21:19:06.919Z",
+    "deviceId": "DEV-001",
+    "sourceUnit": "Unit-A",
+    "animalId": "ANI-0012",
+    "animalWeight": 31.82
+  },
+  {
+    "timestamp": "2025-05-31T12:34:20.868Z",
+    "deviceId": "DEV-003",
+    "sourceUnit": "Unit-B",
+    "animalId": "ANI-0049",
+    "animalWeight": 62.54
+  }
+]
