@@ -6,7 +6,7 @@ import datetime
 # Next.js 应用程序中 API 端点的 URL
 # 确保您的 Next.js 应用程序正在运行并且可以从此 URL 访问
 # 如果您在本地使用 `npm run dev` 运行 Next.js 应用程序，它很可能在端口 9002 上。
-API_URL = "http://localhost:9002/api/data"
+API_URL = "https://localhost/api/data"
 
 def generate_random_data_entry():
     """生成单个随机数据条目。"""
