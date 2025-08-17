@@ -29,6 +29,7 @@ import {
   Sun,
   Shield,
   Trash2,
+  Edit,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { DataEntry, getAvailableDevices } from "@/lib/data";
@@ -49,6 +50,16 @@ import {
   SheetFooter,
   SheetClose,
 } from "@/components/ui/sheet";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -110,6 +121,7 @@ export default function DashboardPage() {
   const [searchHistory, setSearchHistory] = React.useState<string[]>([]);
   const [theme, setTheme] = React.useState("light");
   const [currentUser, setCurrentUser] = React.useState<{ username: string; role: string; permissions: { devices: string[] | 'all' } } | null>(null);
+  const [editingEntry, setEditingEntry] = React.useState<DataEntry | null>(null);
 
   const itemsPerPage = 10;
   
@@ -291,6 +303,49 @@ export default function DashboardPage() {
       toast({
         title: '无数据可删',
         description: '当前筛选条件下没有数据。',
+      });
+    }
+  };
+
+  const handleEditClick = (entry: DataEntry) => {
+    setEditingEntry({ ...entry });
+  };
+
+  const handleEditChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (editingEntry) {
+      const { name, value } = e.target;
+      setEditingEntry({ ...editingEntry, [name]: name === 'animalWeight' ? parseFloat(value) || 0 : value });
+    }
+  };
+
+  const handleUpdate = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingEntry) return;
+
+    try {
+      const response = await fetch(`/api/data`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(editingEntry),
+      });
+
+      if (response.ok) {
+        toast({ title: '成功', description: '数据更新成功。' });
+        setEditingEntry(null);
+        fetchData();
+      } else {
+        const error = await response.json();
+        toast({
+          title: '更新失败',
+          description: error.message || '无法更新数据。',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: '更新出错',
+        description: '发生网络错误。',
+        variant: 'destructive',
       });
     }
   };
@@ -534,6 +589,52 @@ export default function DashboardPage() {
                         <TableCell>{item.animalId}</TableCell>
                         <TableCell className="text-right font-medium">{item.animalWeight.toFixed(2)}</TableCell>
                         <TableCell className="text-right">
+                           <Dialog open={!!editingEntry && editingEntry.id === item.id} onOpenChange={(isOpen) => !isOpen && setEditingEntry(null)}>
+                            <DialogTrigger asChild>
+                              <Button variant="ghost" size="icon" onClick={() => handleEditClick(item)}>
+                                <Edit className="h-4 w-4" />
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent>
+                              <form onSubmit={handleUpdate}>
+                                <DialogHeader>
+                                  <DialogTitle>编辑数据记录</DialogTitle>
+                                  <DialogDescription>
+                                    修改以下字段并保存。
+                                  </DialogDescription>
+                                </DialogHeader>
+                                <div className="grid gap-4 py-4">
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="timestamp" className="text-right">时间戳</Label>
+                                        <Input id="timestamp" name="timestamp" value={editingEntry?.timestamp} onChange={handleEditChange} className="col-span-3" />
+                                    </div>
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="deviceId" className="text-right">设备ID</Label>
+                                        <Input id="deviceId" name="deviceId" value={editingEntry?.deviceId} onChange={handleEditChange} className="col-span-3" />
+                                    </div>
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="sourceUnit" className="text-right">来源单位</Label>
+                                        <Input id="sourceUnit" name="sourceUnit" value={editingEntry?.sourceUnit} onChange={handleEditChange} className="col-span-3" />
+                                    </div>
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="animalId" className="text-right">动物ID</Label>
+                                        <Input id="animalId" name="animalId" value={editingEntry?.animalId} onChange={handleEditChange} className="col-span-3" />
+                                    </div>
+                                    <div className="grid grid-cols-4 items-center gap-4">
+                                        <Label htmlFor="animalWeight" className="text-right">体重 (kg)</Label>
+                                        <Input id="animalWeight" name="animalWeight" type="number" value={editingEntry?.animalWeight} onChange={handleEditChange} className="col-span-3" />
+                                    </div>
+                                </div>
+                                <DialogFooter>
+                                  <DialogClose asChild>
+                                    <Button type="button" variant="secondary">取消</Button>
+                                  </DialogClose>
+                                  <Button type="submit">保存更改</Button>
+                                </DialogFooter>
+                              </form>
+                            </DialogContent>
+                          </Dialog>
+
                           <AlertDialog>
                             <AlertDialogTrigger asChild>
                               <Button variant="ghost" size="icon">

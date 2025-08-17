@@ -59,6 +59,31 @@ export async function POST(request: Request) {
   }
 }
 
+export async function PUT(request: Request) {
+    try {
+      const updatedEntry: DataEntry = await request.json();
+  
+      if (!updatedEntry.id) {
+        return NextResponse.json({ message: '需要提供ID才能更新数据' }, { status: 400 });
+      }
+  
+      const data = await readData();
+      const entryIndex = data.findIndex(entry => entry.id === updatedEntry.id);
+  
+      if (entryIndex === -1) {
+        return NextResponse.json({ message: '未找到要更新的数据' }, { status: 404 });
+      }
+  
+      data[entryIndex] = updatedEntry;
+      await writeData(data);
+  
+      return NextResponse.json({ message: '数据更新成功', entry: updatedEntry });
+    } catch (error) {
+      console.error('处理PUT请求时出错:', error);
+      return NextResponse.json({ message: '服务器内部错误' }, { status: 500 });
+    }
+}
+
 export async function DELETE(request: Request) {
   try {
     const { ids } = await request.json();

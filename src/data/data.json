@@ -1,13 +1,4 @@
-
 [
-  {
-    "timestamp": "2025-08-02T16:49:09.852Z",
-    "deviceId": "DEV-004",
-    "sourceUnit": "Unit-B",
-    "animalId": "ANI-0001",
-    "animalWeight": 149.81,
-    "id": "f29a24c5-846f-4d43-b9b5-d59dd81e592e"
-  },
   {
     "timestamp": "2025-05-24T18:34:09.760Z",
     "deviceId": "DEV-002",
@@ -17,92 +8,12 @@
     "id": "e7c6e6b8-6d2c-4b68-8f19-3c7d6b3c2c1a"
   },
   {
-    "timestamp": "2025-08-10T07:07:03.092Z",
-    "deviceId": "DEV-005",
-    "sourceUnit": "Unit-C",
-    "animalId": "ANI-0040",
-    "animalWeight": 139.09,
-    "id": "1e2f4a56-8e8e-4b6e-8d2a-1c8f9b3b8c3d"
-  },
-  {
-    "timestamp": "2025-08-12T09:08:49.953Z",
-    "deviceId": "DEV-003",
-    "sourceUnit": "Unit-B",
-    "animalId": "ANI-0007",
-    "animalWeight": 38.62,
-    "id": "a9b8c7d6-5e4f-4d3c-b2a1-9c8d7e6f5g4h"
-  },
-  {
-    "timestamp": "2025-06-21T07:50:52.490Z",
-    "deviceId": "DEV-003",
-    "sourceUnit": "Unit-B",
-    "animalId": "ANI-0037",
-    "animalWeight": 133.89,
-    "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
-  },
-  {
-    "timestamp": "2025-08-11T11:45:44.326Z",
-    "deviceId": "DEV-004",
-    "sourceUnit": "Unit-B",
-    "animalId": "ANI-0021",
-    "animalWeight": 126.73,
-    "id": "b3c4d5e6-f7a8-b9c0-d1e2-f3a4b5c6d7e8"
-  },
-  {
-    "timestamp": "2025-08-16T23:26:16.541Z",
-    "deviceId": "DEV-004",
-    "sourceUnit": "Unit-B",
-    "animalId": "ANI-0012",
-    "animalWeight": 114.58,
-    "id": "c4d5e6f7-a8b9-c0d1-e2f3-a4b5c6d7e8f9"
-  },
-  {
     "timestamp": "2025-06-17T18:41:51.212Z",
     "deviceId": "DEV-001",
     "sourceUnit": "Unit-A",
     "animalId": "ANI-0037",
     "animalWeight": 191.86,
     "id": "d5e6f7a8-b9c0-d1e2-f3a4-b5c6d7e8f9g0"
-  },
-  {
-    "timestamp": "2025-06-23T03:41:48.742Z",
-    "deviceId": "DEV-005",
-    "sourceUnit": "Unit-C",
-    "animalId": "ANI-0048",
-    "animalWeight": 7.08,
-    "id": "e6f7a8b9-c0d1-e2f3-a4b5-c6d7e8f9g0h1"
-  },
-  {
-    "timestamp": "2025-08-02T04:52:46.786Z",
-    "deviceId": "DEV-005",
-    "sourceUnit": "Unit-C",
-    "animalId": "ANI-0050",
-    "animalWeight": 197.98,
-    "id": "f7a8b9c0-d1e2-f3a4-b5c6-d7e8f9g0h1i2"
-  },
-  {
-    "timestamp": "2025-06-22T04:29:18.841Z",
-    "deviceId": "DEV-005",
-    "sourceUnit": "Unit-C",
-    "animalId": "ANI-0029",
-    "animalWeight": 184.56,
-    "id": "a8b9c0d1-e2f3-a4b5-c6d7-e8f9g0h1i2j3"
-  },
-  {
-    "timestamp": "2025-07-06T15:33:48.078Z",
-    "deviceId": "DEV-003",
-    "sourceUnit": "Unit-B",
-    "animalId": "ANI-0034",
-    "animalWeight": 197.64,
-    "id": "b9c0d1e2-f3a4-b5c6-d7e8-f9g0h1i2j3k4"
-  },
-  {
-    "timestamp": "2025-07-19T22:54:31.044Z",
-    "deviceId": "DEV-002",
-    "sourceUnit": "Unit-A",
-    "animalId": "ANI-0001",
-    "animalWeight": 78.36,
-    "id": "c0d1e2f3-a4b5-c6d7-e8f9-g0h1i2j3k4l5"
   },
   {
     "timestamp": "2025-08-08T12:32:13.132Z",
