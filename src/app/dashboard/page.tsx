@@ -28,6 +28,7 @@ import {
   Moon,
   Sun,
   Shield,
+  Trash2,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { DataEntry, getAvailableDevices } from "@/lib/data";
@@ -48,6 +49,17 @@ import {
   SheetFooter,
   SheetClose,
 } from "@/components/ui/sheet";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { Label } from "@/components/ui/label";
 import {
   Select,
@@ -97,12 +109,40 @@ export default function DashboardPage() {
   const [suggestions, setSuggestions] = React.useState<string[]>([]);
   const [searchHistory, setSearchHistory] = React.useState<string[]>([]);
   const [theme, setTheme] = React.useState("light");
-  const [currentUser, setCurrentUser] = React.useState<{ username: string; role: string } | null>(null);
+  const [currentUser, setCurrentUser] = React.useState<{ username: string; role: string; permissions: { devices: string[] | 'all' } } | null>(null);
 
   const itemsPerPage = 10;
+  
+  const fetchData = React.useCallback(async () => {
+    try {
+      const response = await fetch('/api/data');
+      if (!response.ok) {
+        throw new Error('获取数据失败');
+      }
+      let jsonData = await response.json();
+      const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
+
+      // Filter data based on user permissions
+      if (user?.role !== 'admin' && user?.permissions?.devices) {
+        jsonData = jsonData.filter((item: DataEntry) => 
+          user.permissions.devices.includes(item.deviceId)
+        );
+      }
+
+      setData(jsonData);
+      setFilteredData(jsonData);
+    } catch (error) {
+      console.error("获取数据时出错:", error);
+      toast({
+        title: "错误",
+        description: "无法加载数据。",
+        variant: "destructive",
+      });
+    }
+  }, [toast]);
+
 
   React.useEffect(() => {
-    // Simulate user session
     const user = localStorage.getItem("currentUser");
     if (user) {
       setCurrentUser(JSON.parse(user));
@@ -113,23 +153,10 @@ export default function DashboardPage() {
         description: "请重新登录。",
         variant: "destructive",
       });
+      return;
     }
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/api/data');
-        if (!response.ok) {
-          throw new Error('获取数据失败');
-        }
-        const jsonData = await response.json();
-        setData(jsonData);
-        setFilteredData(jsonData);
-      } catch (error) {
-        console.error("获取数据时出错:", error);
-      }
-    };
     fetchData();
-  }, [router, toast]);
+  }, [router, toast, fetchData]);
   
   React.useEffect(() => {
     const html = document.documentElement;
@@ -228,6 +255,46 @@ export default function DashboardPage() {
     }
     applyFilters();
   }
+  
+  const handleDelete = async (idsToDelete: string[]) => {
+    try {
+      const response = await fetch('/api/data', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: idsToDelete }),
+      });
+      if (response.ok) {
+        toast({ title: '成功', description: '数据已删除。' });
+        fetchData(); // Refetch data after deletion
+      } else {
+        const error = await response.json();
+        toast({
+          title: '删除失败',
+          description: error.message || '无法删除数据。',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: '删除出错',
+        description: '发生网络错误。',
+        variant: 'destructive',
+      });
+    }
+  };
+
+  const handleDeleteFiltered = () => {
+    const ids = filteredData.map(item => item.id);
+    if (ids.length > 0) {
+      handleDelete(ids);
+    } else {
+      toast({
+        title: '无数据可删',
+        description: '当前筛选条件下没有数据。',
+      });
+    }
+  };
+
 
   const handleExport = () => {
     if (paginatedData.length === 0) return;
@@ -322,7 +389,7 @@ export default function DashboardPage() {
                   onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
                 />
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 flex-wrap">
                  <Button onClick={handleSearch} className="w-full md:w-auto">
                     <Search className="mr-2 h-4 w-4" /> 搜索
                  </Button>
@@ -411,6 +478,28 @@ export default function DashboardPage() {
                     </SheetFooter>
                   </SheetContent>
                 </Sheet>
+                 <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <Button variant="destructive" className="w-full md:w-auto" disabled={filteredData.length === 0}>
+                      <Trash2 className="mr-2 h-4 w-4" />
+                      删除已筛选
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>确认删除？</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        此操作将删除当前筛选出的 {filteredData.length} 条数据。此操作无法撤销。
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>取消</AlertDialogCancel>
+                      <AlertDialogAction onClick={handleDeleteFiltered}>
+                        确认删除
+                      </AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
               </div>
             </div>
              {suggestions.length > 0 && (
@@ -432,22 +521,48 @@ export default function DashboardPage() {
                     <TableHead>来源单位</TableHead>
                     <TableHead>动物ID</TableHead>
                     <TableHead className="text-right">体重 (kg)</TableHead>
+                    <TableHead className="text-right">操作</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
                   {paginatedData.length > 0 ? (
-                    paginatedData.map((item, index) => (
-                      <TableRow key={index}>
+                    paginatedData.map((item) => (
+                      <TableRow key={item.id}>
                         <TableCell>{new Date(item.timestamp).toLocaleString()}</TableCell>
                         <TableCell><Badge variant="outline">{item.deviceId}</Badge></TableCell>
                         <TableCell>{item.sourceUnit}</TableCell>
                         <TableCell>{item.animalId}</TableCell>
                         <TableCell className="text-right font-medium">{item.animalWeight.toFixed(2)}</TableCell>
+                        <TableCell className="text-right">
+                          <AlertDialog>
+                            <AlertDialogTrigger asChild>
+                              <Button variant="ghost" size="icon">
+                                <Trash2 className="h-4 w-4" />
+                              </Button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                              <AlertDialogHeader>
+                                <AlertDialogTitle>确认删除？</AlertDialogTitle>
+                                <AlertDialogDescription>
+                                  此操作无法撤销。您确定要删除这条数据吗？
+                                </AlertDialogDescription>
+                              </AlertDialogHeader>
+                              <AlertDialogFooter>
+                                <AlertDialogCancel>取消</AlertDialogCancel>
+                                <AlertDialogAction
+                                  onClick={() => handleDelete([item.id])}
+                                >
+                                  删除
+                                </AlertDialogAction>
+                              </AlertDialogFooter>
+                            </AlertDialogContent>
+                          </AlertDialog>
+                        </TableCell>
                       </TableRow>
                     ))
                   ) : (
                     <TableRow>
-                      <TableCell colSpan={5} className="h-24 text-center">
+                      <TableCell colSpan={6} className="h-24 text-center">
                         未找到结果。
                       </TableCell>
                     </TableRow>

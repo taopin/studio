@@ -1,4 +1,7 @@
+import { randomUUID } from 'crypto';
+
 export type DataEntry = {
+  id: string;
   timestamp: string;
   deviceId: string;
   sourceUnit: string;
@@ -17,7 +20,7 @@ const randomDate = () => {
 // Generates a random integer between min and max (inclusive)
 const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-export const mockData: DataEntry[] = Array.from({ length: 150 }, (_, i) => {
+export const mockData: Omit<DataEntry, 'id'>[] = Array.from({ length: 150 }, (_, i) => {
     const deviceNum = randomInt(1, 5);
     const unitNum = Math.ceil(deviceNum / 2);
     return {
