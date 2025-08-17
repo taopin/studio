@@ -245,15 +245,15 @@ export default function DashboardPage() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>个人资料</DropdownMenuItem>
             <DropdownMenuItem onClick={toggleTheme}>
               {theme === 'light' ? <Moon className="mr-2 h-4 w-4" /> : <Sun className="mr-2 h-4 w-4" />}
-              Toggle Theme
+              切换主题
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogOut className="mr-2 h-4 w-4" />
-              Logout
+              登出
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
@@ -261,9 +261,9 @@ export default function DashboardPage() {
 
       <main className="flex flex-1 flex-col gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
         <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+            <h1 className="text-3xl font-bold tracking-tight">仪表盘</h1>
             <p className="text-muted-foreground">
-                Here's the latest data from your IoT devices.
+                这是来自您的物联网设备的最新数据。
             </p>
         </div>
 
@@ -274,7 +274,7 @@ export default function DashboardPage() {
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search by any field..."
+                  placeholder="按任意字段搜索..."
                   className="w-full rounded-lg bg-background pl-8 md:w-[300px] lg:w-[400px]"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -283,32 +283,32 @@ export default function DashboardPage() {
               </div>
               <div className="flex gap-2">
                  <Button onClick={handleSearch} className="w-full md:w-auto">
-                    <Search className="mr-2 h-4 w-4" /> Search
+                    <Search className="mr-2 h-4 w-4" /> 搜索
                  </Button>
                 <Sheet>
                   <SheetTrigger asChild>
                     <Button variant="outline" className="w-full md:w-auto">
                       <Filter className="mr-2 h-4 w-4" />
-                      Advanced Filters
+                      高级筛选
                     </Button>
                   </SheetTrigger>
                   <SheetContent>
                     <SheetHeader>
-                      <SheetTitle>Advanced Filters</SheetTitle>
+                      <SheetTitle>高级筛选</SheetTitle>
                       <SheetDescription>
-                        Refine your data view with more specific criteria.
+                        使用更具体的条件优化您的数据视图。
                       </SheetDescription>
                     </SheetHeader>
                     <div className="grid gap-4 py-4">
                       <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="animalId" className="text-right">Animal ID</Label>
+                        <Label htmlFor="animalId" className="text-right">动物ID</Label>
                         <Input id="animalId" value={filters.animalId} onChange={(e) => handleFilterChange('animalId', e.target.value)} className="col-span-3" />
                       </div>
                       <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="deviceId" className="text-right">Device ID</Label>
+                        <Label htmlFor="deviceId" className="text-right">设备ID</Label>
                         <Select value={filters.deviceId} onValueChange={(val) => handleFilterChange('deviceId', val)}>
                           <SelectTrigger className="col-span-3">
-                            <SelectValue placeholder="Select device" />
+                            <SelectValue placeholder="选择设备" />
                           </SelectTrigger>
                           <SelectContent>
                             {availableDevices.map(dev => <SelectItem key={dev} value={dev}>{dev}</SelectItem>)}
@@ -316,14 +316,14 @@ export default function DashboardPage() {
                         </Select>
                       </div>
                       <div className="grid grid-cols-4 items-center gap-4">
-                        <Label className="text-right">Weight</Label>
+                        <Label className="text-right">体重</Label>
                         <div className="col-span-3 grid grid-cols-2 gap-2">
-                          <Input id="weightMin" type="number" placeholder="Min" value={filters.weightMin} onChange={(e) => handleFilterChange('weightMin', e.target.value)} />
-                          <Input id="weightMax" type="number" placeholder="Max" value={filters.weightMax} onChange={(e) => handleFilterChange('weightMax', e.target.value)} />
+                          <Input id="weightMin" type="number" placeholder="最小" value={filters.weightMin} onChange={(e) => handleFilterChange('weightMin', e.target.value)} />
+                          <Input id="weightMax" type="number" placeholder="最大" value={filters.weightMax} onChange={(e) => handleFilterChange('weightMax', e.target.value)} />
                         </div>
                       </div>
                       <div className="grid grid-cols-4 items-center gap-4">
-                        <Label className="text-right">Date Range</Label>
+                        <Label className="text-right">日期范围</Label>
                         <Popover>
                           <PopoverTrigger asChild>
                             <Button
@@ -345,7 +345,7 @@ export default function DashboardPage() {
                                   format(filters.dateRange.from, "LLL dd, y")
                                 )
                               ) : (
-                                <span>Pick a date range</span>
+                                <span>选择一个日期范围</span>
                               )}
                             </Button>
                           </PopoverTrigger>
@@ -363,9 +363,9 @@ export default function DashboardPage() {
                       </div>
                     </div>
                     <SheetFooter>
-                        <Button variant="secondary" onClick={handleClearFilters}>Clear</Button>
+                        <Button variant="secondary" onClick={handleClearFilters}>清除</Button>
                         <SheetClose asChild>
-                            <Button onClick={applyFilters}>Apply Filters</Button>
+                            <Button onClick={applyFilters}>应用筛选</Button>
                         </SheetClose>
                     </SheetFooter>
                   </SheetContent>
@@ -374,7 +374,7 @@ export default function DashboardPage() {
             </div>
              {suggestions.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2 items-center">
-                <span className="text-sm font-medium text-muted-foreground">AI Suggestions:</span>
+                <span className="text-sm font-medium text-muted-foreground">AI建议:</span>
                 {suggestions.map((s, i) => (
                   <Badge key={i} variant="secondary" className="cursor-pointer hover:bg-primary/20" onClick={() => handleSuggestionClick(s)}>{s}</Badge>
                 ))}
@@ -386,11 +386,11 @@ export default function DashboardPage() {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Timestamp</TableHead>
-                    <TableHead>Device ID</TableHead>
-                    <TableHead>Source Unit</TableHead>
-                    <TableHead>Animal ID</TableHead>
-                    <TableHead className="text-right">Weight (kg)</TableHead>
+                    <TableHead>时间戳</TableHead>
+                    <TableHead>设备ID</TableHead>
+                    <TableHead>来源单位</TableHead>
+                    <TableHead>动物ID</TableHead>
+                    <TableHead className="text-right">体重 (kg)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -407,7 +407,7 @@ export default function DashboardPage() {
                   ) : (
                     <TableRow>
                       <TableCell colSpan={5} className="h-24 text-center">
-                        No results found.
+                        未找到结果。
                       </TableCell>
                     </TableRow>
                   )}
@@ -417,7 +417,7 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between mt-4">
               <Button onClick={handleExport} variant="outline" size="sm" disabled={paginatedData.length === 0}>
                 <Download className="mr-2 h-4 w-4" />
-                Export Page CSV
+                导出本页CSV
               </Button>
               <div className="flex items-center gap-2">
                 <Button
@@ -429,7 +429,7 @@ export default function DashboardPage() {
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
                 <span className="text-sm font-medium">
-                  Page {currentPage} of {totalPages}
+                  第 {currentPage} 页，共 {totalPages} 页
                 </span>
                 <Button
                   variant="outline"

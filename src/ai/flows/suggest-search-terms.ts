@@ -40,12 +40,12 @@ const prompt = ai.definePrompt({
   name: 'suggestSearchTermsPrompt',
   input: {schema: SuggestSearchTermsInputSchema},
   output: {schema: SuggestSearchTermsOutputSchema},
-  prompt: `You are an AI assistant that suggests search terms to the user, based on the latest data ingested and the user's past search history.
+  prompt: `你是一个AI助手，根据最新录入的数据和用户过去和搜索历史，为用户推荐搜索词。
 
-Latest Data Summary: {{{latestDataSummary}}}
-Search History: {{{searchHistory}}}
+最新数据摘要: {{{latestDataSummary}}}
+搜索历史: {{{searchHistory}}}
 
-Suggest search terms that the user might be interested in. Return the terms in a comma-separated list.
+推荐用户可能感兴趣的搜索词。返回以逗号分隔的术语列表。
 `, safetySettings: [
     {
       category: 'HARM_CATEGORY_HATE_SPEECH',

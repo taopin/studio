@@ -3,17 +3,17 @@ import json
 import random
 import datetime
 
-# The URL of the API endpoint in your Next.js application
-# Make sure your Next.js app is running and accessible at this URL
-# If you are running the Next.js app locally with `npm run dev`, it's likely on port 9002.
+# Next.js 应用程序中 API 端点的 URL
+# 确保您的 Next.js 应用程序正在运行并且可以从此 URL 访问
+# 如果您在本地使用 `npm run dev` 运行 Next.js 应用程序，它很可能在端口 9002 上。
 API_URL = "http://localhost:9002/api/data"
 
 def generate_random_data_entry():
-    """Generates a single random data entry."""
+    """生成单个随机数据条目。"""
     device_num = random.randint(1, 5)
     unit_num = (device_num + 1) // 2
     
-    # Generate a random timestamp within the last 90 days
+    # 在过去 90 天内生成一个随机时间戳
     end_date = datetime.datetime.now()
     start_date = end_date - datetime.timedelta(days=90)
     random_date = start_date + (end_date - start_date) * random.random()
@@ -28,27 +28,27 @@ def generate_random_data_entry():
     return data_entry
 
 def send_data_to_server(data_entry):
-    """Sends the data entry to the server via a POST request."""
+    """通过 POST 请求将数据条目发送到服务器。"""
     headers = {"Content-Type": "application/json"}
     try:
         response = requests.post(API_URL, data=json.dumps(data_entry), headers=headers)
         
-        # Check if the request was successful
+        # 检查请求是否成功
         if response.status_code == 201:
-            print("Data sent successfully!")
-            print("Response:", response.json())
+            print("数据发送成功！")
+            print("响应:", response.json())
         else:
-            print(f"Failed to send data. Status code: {response.status_code}")
-            print("Response:", response.text)
+            print(f"发送数据失败。状态码: {response.status_code}")
+            print("响应:", response.text)
             
     except requests.exceptions.RequestException as e:
-        print(f"An error occurred while sending the request: {e}")
+        print(f"发送请求时发生错误: {e}")
 
 if __name__ == "__main__":
-    print("Generating a random data record for testing...")
+    print("正在生成用于测试的随机数据记录...")
     test_data = generate_random_data_entry()
-    print("\nGenerated Data:")
+    print("\n生成的数据:")
     print(json.dumps(test_data, indent=2))
     
-    print(f"\nSending data to {API_URL}...")
+    print(f"\n正在向 {API_URL} 发送数据...")
     send_data_to_server(test_data)

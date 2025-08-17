@@ -53,30 +53,30 @@ export default function LoginPage() {
             <div className="mx-auto mb-4">
               <Logo />
             </div>
-            <CardTitle className="text-2xl">Welcome</CardTitle>
+            <CardTitle className="text-2xl">欢迎</CardTitle>
             <CardDescription>
-              Sign in to your account or create a new one.
+              登录或创建新帐户。
             </CardDescription>
             <TabsList className="grid w-full grid-cols-2 mt-4">
-              <TabsTrigger value="login">Sign In</TabsTrigger>
-              <TabsTrigger value="register">Sign Up</TabsTrigger>
+              <TabsTrigger value="login">登录</TabsTrigger>
+              <TabsTrigger value="register">注册</TabsTrigger>
             </TabsList>
           </CardHeader>
           <TabsContent value="login">
             <form onSubmit={handleLogin}>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="login-username">Username</Label>
+                  <Label htmlFor="login-username">用户名</Label>
                   <Input
                     id="login-username"
                     type="text"
-                    placeholder="e.g., admin"
+                    placeholder="例如：admin"
                     defaultValue="admin"
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="login-password">Password</Label>
+                  <Label htmlFor="login-password">密码</Label>
                   <div className="relative">
                     <Input
                       id="login-password"
@@ -95,7 +95,7 @@ export default function LoginPage() {
                     >
                       {showPassword ? <EyeOff /> : <Eye />}
                       <span className="sr-only">
-                        {showPassword ? 'Hide password' : 'Show password'}
+                        {showPassword ? '隐藏密码' : '显示密码'}
                       </span>
                     </Button>
                   </div>
@@ -103,10 +103,10 @@ export default function LoginPage() {
               </CardContent>
               <CardFooter className="flex flex-col">
                 <Button type="submit" className="w-full">
-                  Sign In
+                  登录
                 </Button>
                 <p className="mt-4 text-xs text-muted-foreground">
-                  Demo access: Any username/password will work.
+                  演示访问：任何用户名/密码都可以使用。
                 </p>
               </CardFooter>
             </form>
@@ -115,21 +115,21 @@ export default function LoginPage() {
             <form onSubmit={handleRegister}>
               <CardContent className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="register-username">Username</Label>
+                  <Label htmlFor="register-username">用户名</Label>
                   <Input
                     id="register-username"
                     type="text"
-                    placeholder="Choose a username"
+                    placeholder="选择一个用户名"
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="register-password">Password</Label>
+                  <Label htmlFor="register-password">密码</Label>
                    <div className="relative">
                     <Input
                       id="register-password"
                       type={showPassword ? 'text' : 'password'}
-                      placeholder="Create a password"
+                      placeholder="创建一个密码"
                       required
                       className="pr-10"
                     />
@@ -142,18 +142,18 @@ export default function LoginPage() {
                     >
                       {showPassword ? <EyeOff /> : <Eye />}
                       <span className="sr-only">
-                        {showPassword ? 'Hide password' : 'Show password'}
+                        {showPassword ? '隐藏密码' : '显示密码'}
                       </span>
                     </Button>
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="confirm-password">Confirm Password</Label>
+                  <Label htmlFor="confirm-password">确认密码</Label>
                   <div className="relative">
                     <Input
                       id="confirm-password"
                       type={showConfirmPassword ? 'text' : 'password'}
-                      placeholder="Confirm your password"
+                      placeholder="确认您的密码"
                       required
                       className="pr-10"
                     />
@@ -166,7 +166,7 @@ export default function LoginPage() {
                     >
                       {showConfirmPassword ? <EyeOff /> : <Eye />}
                        <span className="sr-only">
-                        {showConfirmPassword ? 'Hide password' : 'Show password'}
+                        {showConfirmPassword ? '隐藏密码' : '显示密码'}
                       </span>
                     </Button>
                   </div>
@@ -174,7 +174,7 @@ export default function LoginPage() {
               </CardContent>
               <CardFooter>
                 <Button type="submit" className="w-full">
-                  Create Account
+                  创建账户
                 </Button>
               </CardFooter>
             </form>
