@@ -16,25 +16,101 @@ import { Label } from '@/components/ui/label';
 import { Logo } from '@/components/logo';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Eye, EyeOff } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 export default function LoginPage() {
   const router = useRouter();
+  const { toast } = useToast();
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const [loginUsername, setLoginUsername] = React.useState('admin');
+  const [loginPassword, setLoginPassword] = React.useState('password');
+
+  const [registerUsername, setRegisterUsername] = React.useState('');
+  const [registerPassword, setRegisterPassword] = React.useState('');
+  const [registerConfirmPassword, setRegisterConfirmPassword] = React.useState('');
+
+  React.useEffect(() => {
+    // Clear user session on login page load
+    localStorage.removeItem("currentUser");
+  }, []);
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you'd have authentication logic here.
-    // For this demo, we'll just redirect to the dashboard.
-    router.push('/dashboard');
+    try {
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: loginUsername, password: loginPassword }),
+      });
+
+      if (response.ok) {
+        const user = await response.json();
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        router.push('/dashboard');
+        toast({
+          title: '登录成功',
+          description: `欢迎回来, ${user.username}!`,
+        });
+      } else {
+        const error = await response.json();
+        toast({
+          title: '登录失败',
+          description: error.message || '用户名或密码错误。',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: '登录出错',
+        description: '发生网络错误，请稍后重试。',
+        variant: 'destructive',
+      });
+    }
   };
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you'd have registration logic here.
-    // For this demo, we'll just redirect to the dashboard.
-    // You might want to show a success message first.
-    router.push('/dashboard');
+    if (registerPassword !== registerConfirmPassword) {
+      toast({
+        title: '注册失败',
+        description: '两次输入的密码不一致。',
+        variant: 'destructive',
+      });
+      return;
+    }
+    
+    try {
+      const response = await fetch('/api/users/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: registerUsername, password: registerPassword }),
+      });
+
+      if (response.ok) {
+        const user = await response.json();
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        router.push('/dashboard');
+        toast({
+          title: '注册成功',
+          description: `欢迎, ${user.username}! 您的账户已创建。`,
+        });
+      } else {
+        const error = await response.json();
+        toast({
+          title: '注册失败',
+          description: error.message || '无法创建账户，请稍后重试。',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast({
+        title: '注册出错',
+        description: '发生网络错误，请稍后重试。',
+        variant: 'destructive',
+      });
+    }
   };
 
   const togglePasswordVisibility = () => {
@@ -71,7 +147,8 @@ export default function LoginPage() {
                     id="login-username"
                     type="text"
                     placeholder="例如：admin"
-                    defaultValue="admin"
+                    value={loginUsername}
+                    onChange={(e) => setLoginUsername(e.target.value)}
                     required
                   />
                 </div>
@@ -82,7 +159,8 @@ export default function LoginPage() {
                       id="login-password"
                       type={showPassword ? 'text' : 'password'}
                       placeholder="••••••••"
-                      defaultValue="password"
+                      value={loginPassword}
+                      onChange={(e) => setLoginPassword(e.target.value)}
                       required
                       className="pr-10"
                     />
@@ -105,9 +183,6 @@ export default function LoginPage() {
                 <Button type="submit" className="w-full">
                   登录
                 </Button>
-                <p className="mt-4 text-xs text-muted-foreground">
-                  演示访问：任何用户名/密码都可以使用。
-                </p>
               </CardFooter>
             </form>
           </TabsContent>
@@ -120,6 +195,8 @@ export default function LoginPage() {
                     id="register-username"
                     type="text"
                     placeholder="选择一个用户名"
+                    value={registerUsername}
+                    onChange={(e) => setRegisterUsername(e.target.value)}
                     required
                   />
                 </div>
@@ -130,6 +207,8 @@ export default function LoginPage() {
                       id="register-password"
                       type={showPassword ? 'text' : 'password'}
                       placeholder="创建一个密码"
+                      value={registerPassword}
+                      onChange={(e) => setRegisterPassword(e.target.value)}
                       required
                       className="pr-10"
                     />
@@ -154,6 +233,8 @@ export default function LoginPage() {
                       id="confirm-password"
                       type={showConfirmPassword ? 'text' : 'password'}
                       placeholder="确认您的密码"
+                      value={registerConfirmPassword}
+                      onChange={(e) => setRegisterConfirmPassword(e.target.value)}
                       required
                       className="pr-10"
                     />

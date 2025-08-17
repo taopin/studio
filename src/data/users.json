@@ -1,0 +1,26 @@
+[
+  {
+    "username": "admin",
+    "password": "password",
+    "role": "admin",
+    "permissions": {
+      "devices": "all"
+    }
+  },
+  {
+    "username": "user1",
+    "password": "password1",
+    "role": "user",
+    "permissions": {
+      "devices": ["DEV-001", "DEV-002"]
+    }
+  },
+  {
+    "username": "user2",
+    "password": "password2",
+    "role": "user",
+    "permissions": {
+      "devices": ["DEV-003", "DEV-004", "DEV-005"]
+    }
+  }
+]

@@ -29,4 +29,8 @@ export const mockData: DataEntry[] = Array.from({ length: 150 }, (_, i) => {
     }
 });
 
-export const getAvailableDevices = (data: DataEntry[]) => [...new Set(data.map(d => d.deviceId))];
+export const getAvailableDevices = (data: DataEntry[]) => {
+    const devices = [...new Set(data.map(d => d.deviceId))];
+    devices.sort();
+    return devices;
+};

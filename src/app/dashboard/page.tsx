@@ -27,6 +27,7 @@ import {
   LogOut,
   Moon,
   Sun,
+  Shield,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { DataEntry, getAvailableDevices } from "@/lib/data";
@@ -68,6 +69,8 @@ import { getAiSuggestions } from "../actions";
 import { Badge } from "@/components/ui/badge";
 import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
 
 type Filters = {
   animalId: string;
@@ -78,6 +81,8 @@ type Filters = {
 };
 
 export default function DashboardPage() {
+  const router = useRouter();
+  const { toast } = useToast();
   const [data, setData] = React.useState<DataEntry[]>([]);
   const [filteredData, setFilteredData] = React.useState<DataEntry[]>([]);
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -92,24 +97,45 @@ export default function DashboardPage() {
   const [suggestions, setSuggestions] = React.useState<string[]>([]);
   const [searchHistory, setSearchHistory] = React.useState<string[]>([]);
   const [theme, setTheme] = React.useState("light");
-  
+  const [currentUser, setCurrentUser] = React.useState<{ username: string; role: string } | null>(null);
+
   const itemsPerPage = 10;
 
   React.useEffect(() => {
+    // Simulate user session
+    const user = localStorage.getItem("currentUser");
+    if (user) {
+      setCurrentUser(JSON.parse(user));
+    } else {
+      router.push("/login");
+      toast({
+        title: "会话无效",
+        description: "请重新登录。",
+        variant: "destructive",
+      });
+    }
+
     const fetchData = async () => {
       try {
         const response = await fetch('/api/data');
         if (!response.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error('获取数据失败');
         }
         const jsonData = await response.json();
         setData(jsonData);
         setFilteredData(jsonData);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("获取数据时出错:", error);
       }
     };
     fetchData();
+  }, [router, toast]);
+  
+  React.useEffect(() => {
+    const html = document.documentElement;
+    const storedTheme = localStorage.getItem("theme") || "light";
+    setTheme(storedTheme);
+    html.classList.toggle("dark", storedTheme === "dark");
   }, []);
 
   React.useEffect(() => {
@@ -220,7 +246,13 @@ export default function DashboardPage() {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("currentUser");
+    router.push("/login");
   };
 
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
@@ -245,13 +277,22 @@ export default function DashboardPage() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem>个人资料</DropdownMenuItem>
+            <DropdownMenuItem>
+              <User className="mr-2 h-4 w-4" />
+              个人资料
+            </DropdownMenuItem>
+            {currentUser?.role === 'admin' && (
+              <DropdownMenuItem onClick={() => router.push('/admin')}>
+                <Shield className="mr-2 h-4 w-4" />
+                管理员面板
+              </DropdownMenuItem>
+            )}
             <DropdownMenuItem onClick={toggleTheme}>
               {theme === 'light' ? <Moon className="mr-2 h-4 w-4" /> : <Sun className="mr-2 h-4 w-4" />}
               切换主题
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={handleLogout}>
               <LogOut className="mr-2 h-4 w-4" />
               登出
             </DropdownMenuItem>
