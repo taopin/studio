@@ -29,7 +29,7 @@ import {
   Sun,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { mockData, DataEntry, availableDevices } from "@/lib/data";
+import { DataEntry, getAvailableDevices } from "@/lib/data";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -96,9 +96,20 @@ export default function DashboardPage() {
   const itemsPerPage = 10;
 
   React.useEffect(() => {
-    // Simulate data fetch
-    setData(mockData);
-    setFilteredData(mockData);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/data');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const jsonData = await response.json();
+        setData(jsonData);
+        setFilteredData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
   }, []);
 
   React.useEffect(() => {
@@ -217,6 +228,8 @@ export default function DashboardPage() {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+  
+  const availableDevices = getAvailableDevices(data);
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
